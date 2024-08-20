@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+        body{
+            display: flex;
+            margin:5vh;
+            padding:10%;
+            overflow:hidden;
+        }
+        .scrollable-text{
+            position: absolute;
+            white-space: nowrap;
+            animation:scrolltext 20s linear infinite;
+        }
+        .blinking-text{
+            animation:blinktext 1s alternate infinite;
+        }
+        
+        @keyframes scrolltext{
+            0%{
+                transform:translateX(100%);
+            }
+            100%{
+                transform:translateX(-100);
+            }
+        }
+        @keyframes blinktext{
+            0%,100%{
+                opacity:1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+    </style>
+    <title>CSS aniamtion Demo</title>
+    </head>
+    <body>
+        <div class="scrollable-text">
+            This is a scrollable text that scroll from left to right
+        </div>
+        <div class="blinking-text">
+            <p>This is blinking text</p>    
+
+        </div>
+    </body>
